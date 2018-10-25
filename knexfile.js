@@ -2,8 +2,10 @@ module.exports = {
   development: {
       client: 'pg',
       connection: {
-        database: "transaction-app",
-        host: "localhost"
+        database: "transactions_dev",
+        host: "transactions-dev.cbcp0inbl2z6.us-east-2.rds.amazonaws.com",
+        user: 'root',
+        password: ''
       },
       migrations: {
           directory: __dirname + '/db/migrations',
