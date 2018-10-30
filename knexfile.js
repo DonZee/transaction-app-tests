@@ -1,3 +1,4 @@
+const secret = require('./config/secret')
 module.exports = {
   development: {
       client: 'pg',
@@ -5,7 +6,7 @@ module.exports = {
         database: "transactions_dev",
         host: "transactions-dev.cbcp0inbl2z6.us-east-2.rds.amazonaws.com",
         user: 'root',
-        password: ''
+        password: secret.aws_db_pass
       },
       migrations: {
           directory: __dirname + '/db/migrations',
