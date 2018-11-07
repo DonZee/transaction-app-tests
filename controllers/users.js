@@ -7,6 +7,8 @@ module.exports = {
     hasher.hash(req.body).then((user)=>{
       knex('users').insert(user).then(()=>{
         res.json({message: 'User has been created'})
+      }).catch((err)=>{
+        res.status(403).send({message: err});
       })
     })
   },

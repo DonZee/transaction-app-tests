@@ -9,6 +9,10 @@ module.exports = function(app){
 
   app.use(verifyToken);
   app.get('/transactions', transactions.index);
+  app.get('/transactions/:id', transactions.show);
+  app.post('/transactions', transactions.create);
+  app.put('/transactions/:id', transactions.update);
+  app.delete('/transactions/:id', transactions.delete);
 
 }
 
